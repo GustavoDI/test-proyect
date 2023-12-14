@@ -25,3 +25,14 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+# Uso libreria exceljs diciembre 2023
+1. Emulación de data con json server https://www.npmjs.com/package/json-server
+    npm i json-server
+
+    libreria excel js / npm i exceljs file-saver
+    para el tipado de file-saver / npm i -D @types/file-saver
+    
+2. Creación de servicio para excel.
+3. pruebas en appComponent

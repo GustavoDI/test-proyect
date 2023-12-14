@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { SharedComponent } from './shared/shared.component';
 import { PruebaComponent } from './shared/compartido/prueba/prueba.component';
 import { PasswordComponent } from './shared/password/password.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { PasswordComponent } from './shared/password/password.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     LoggerModule.forRoot({
         serverLoggingUrl: '/api/logs',

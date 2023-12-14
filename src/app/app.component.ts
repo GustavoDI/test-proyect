@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NGXLogger } from 'ngx-logger';
+import { PruebasService } from './pruebas.service';
+import { ExcelService } from './excel.service';
 
 @Component({
   selector: 'app-root',
@@ -8,14 +10,22 @@ import { NGXLogger } from 'ngx-logger';
 })
 export class AppComponent {
   title = 'logger-test-proyect';
+  data: any;
+  constructor(private logger: NGXLogger,
+    private pruebasService: PruebasService,
+    private excelService: ExcelService) {
 
-  constructor(private logger: NGXLogger) {
-    this.logger.debug("Debug message");
-    this.logger.info("Info message");
-    this.logger.log("Default log message");
-    this.logger.warn("Warning message");
-    this.logger.error("Error message");
+    
   }
+
+  async  descarga(): Promise<void> {
+    this.data = await this.pruebasService.getPrueba().toPromise();
+    console.log(this.data);
+    this.excelService.download(this.data);
+  }
+
+
+  
 }
 
 
