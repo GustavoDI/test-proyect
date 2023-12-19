@@ -8,6 +8,7 @@ import { SharedComponent } from './shared/shared.component';
 import { PruebaComponent } from './shared/compartido/prueba/prueba.component';
 import { PasswordComponent } from './shared/password/password.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    FormsModule,
     LoggerModule.forRoot({
         serverLoggingUrl: '/api/logs',
         level: NgxLoggerLevel.TRACE,
