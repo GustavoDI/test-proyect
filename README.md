@@ -33,6 +33,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
     libreria excel js / npm i exceljs file-saver
     para el tipado de file-saver / npm i -D @types/file-saver
+    una vez realizado, agregar al tsconfig.app.json 
+    "node" en el type 
+    "types": ["node"]
     
 2. Creación de servicio para excel.
 3. pruebas en appComponent

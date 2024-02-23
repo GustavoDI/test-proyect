@@ -9,13 +9,21 @@ import { PruebaComponent } from './shared/compartido/prueba/prueba.component';
 import { PasswordComponent } from './shared/password/password.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ReporteComponent } from './shared/compartido/reporte/reporte.component';
+import { PruebaMarioComponent } from './shared/compartido/mario/prueba-mario.component';
+import { MarioRComponent } from './shared/compartido/mario-r/mario-r.component';
+import { DwhPausasComponent } from './shared/compartido/dwh-pausas/dwh-pausas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SharedComponent,
     PruebaComponent,
-    PasswordComponent
+    PasswordComponent,
+    ReporteComponent,
+    PruebaMarioComponent,
+    MarioRComponent,
+    DwhPausasComponent
   ],
   imports: [
     BrowserModule,

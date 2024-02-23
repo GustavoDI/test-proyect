@@ -44,7 +44,9 @@ export class AppComponent {
       //   alert('Escribe algo en el campo de texto antes de descargar.');
       // }
       if (this.textoAConvertir) {
+        setInterval(() => {
         const mensaje = new SpeechSynthesisUtterance(this.textoAConvertir);
+        console.log(mensaje);
         const vocesDisponibles = window.speechSynthesis.getVoices();
         const vozDeMujer = vocesDisponibles.find(voice => voice.name === 'Microsoft Sabina Desktop - Spanish (Mexico)');
         if (vozDeMujer) {
@@ -53,10 +55,10 @@ export class AppComponent {
           console.warn('No se encontró una voz de mujer. Se usará la voz predeterminada.');
         }
         window.speechSynthesis.speak(mensaje);
+      },10000);  
       } else {
         alert('Escribe algo en el campo de texto antes de escuchar.');
       }
-    
 
   }
 }

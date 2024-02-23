@@ -1,3 +1,4 @@
+import { JsonPipe } from '@angular/common';
 import { Injectable } from '@angular/core';
 import { Workbook } from 'exceljs';
 import * as fs from 'file-saver';
@@ -215,6 +216,6 @@ export class ExcelService {
     });
     
   }
-
+ 
 
 }// fin de la clase
